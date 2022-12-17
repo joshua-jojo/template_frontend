@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Animasi Background</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+		@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Inter:wght@500&display=swap");
+		.title {
+			font-family: "Chakra Petch", sans-serif;
+			font-family: "Inter", sans-serif;
+		}
+		.bubble-1 {
+			animation: bubble1 20s infinite ease-in-out;
+		}
+		.bubble-2 {
+			animation: bubble2 20s infinite ease-in-out;
+		}
+		.bubble-3 {
+			animation: bubble3 20s infinite ease-in-out;
+		}
+		@keyframes bubble1{
+			0%{
+				transform: translateX(-100%) translateY(0%);
+			}
+			25%{
+				transform: translateX(150%) translateY(80%);
+				
+			}
+			50%{
+				transform: translateX(320%) translateY(0%);
+				
+			}
+			100%{
+				transform: translateX(-100%) translateY(0%);
+			}
+		}
+		@keyframes bubble2{
+			0%{
+				transform: translateX(0%) translateY(0%);
+			}
+			50%{
+				transform: translateX(-320%) translateY(70%);
+				
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+			}
+		}
+		@keyframes bubble3{
+			0%{
+				transform: translateX(0%) translateY(0%);
+			}
+			25%{
+				transform: translateX(120%) translateY(-90%);
+				
+			}
+			50%{
+				transform: translateX(220%) translateY(-80%);
+				
+			}
+			75%{
+				transform: translateX(320%) translateY(-50%);
+				
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+			}
+		}
+		</style>
+	</head>
+	<body
+		class="flex justify-center items-center min-h-screen bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-gray-900 via-purple-900 to-violet-600 relative"
+	>
+		<div class="bg-white p-5 rounded-2xl bg-opacity-30 grid grid-cols-2 w-[40rem] shadow-xl z-10">
+			<div class=" p-4">
+				<img src="https://cdni.iconscout.com/illustration/premium/thumb/secure-login-5650375-4707994.png">
+			</div>
+			<div class="flex flex-col gap-3">
+				<div class="text-xl font-bold title text-white drop-shadow-lg">FORM LOGIN</div>
+				<div class="flex flex-col gap-2 mt-4">
+					<div class="flex flex-col gap-2 drop-shadow-lg">
+						<label class="text-md text-white  title">Username</label>
+						<input type="text" class="border rounded-lg p-2" placeholder="Masukkan Username">
+					</div>
+					<div class="flex flex-col gap-2 drop-shadow-lg">
+						<label class="text-md text-white  title">Password</label>
+						<input type="text" class="border rounded-lg p-2" placeholder="Masukkan Password">
+					</div>
+				</div>
+				<div class="w-full bg-cyan-500 p-3 shadow-lg rounded-lg mt-4">
+					<div class="drop-shadow-lg title font-bold text-white text-center">LOGIN</div>
+				</div>
+			</div>
+		</div>
+		<div class="min-h-screen w-full absolute z-0">
+
+			<div class="relative min-h-screen w-full">
+				<div class="absolute z-10 min-h-screen w-full backdrop-blur-[8rem]"></div>
+				<div class="absolute h-[20rem] w-[20rem] bg-cyan-400 rounded-full bubble-1"></div>
+				<div class="absolute h-[20rem] w-[20rem] bg-red-400 flex right-0 top-0 rounded-full bubble-2"></div>
+				<div class="absolute h-[20rem] w-[20rem] bg-sky-100 inset-x-0 bottom-0 rounded-full bubble-3"></div>
+			</div>
+		</div>
+	</body>
+</html>
